@@ -1,28 +1,60 @@
 #include "main_dialog.h"
 
+#include "fileverification.h"
+#include "analisys_dialog.h"
+#include "plottingchart_dialog.h"
+
 Main_dialog::Main_dialog(QWidget *parent)
     : QWidget(parent)
 { 
-    QLabel *pathToFileLabel = new QLabel("Path to file with stock exchange data");
-
-    QLineEdit *pathToFileLineEdit = new QLineEdit;
-    pathToFileLineEdit->setPlaceholderText("C:/Qt_Projects/St_ex/Initial_Data/GAZPROM_2022.txt");
-    pathToFileLineEdit->setReadOnly(true);
-
-    QLabel *startDateTimeLabel = new QLabel("Start Date and Time");
-    QLabel *endDateTimeLabel = new QLabel("End Date and Time");
-    DateAndTime_dialog *dat_begin = new DateAndTime_dialog;
-    DateAndTime_dialog *dat_end = new DateAndTime_dialog;
+    FileVerification *fileverification = new FileVerification;
+    PlottingChart_Dialog *plottingChart = new PlottingChart_Dialog;
+    Analisys_dialog *analisys_dialog = new Analisys_dialog;
 
     QGridLayout *mainDialog = new QGridLayout(this);
-    mainDialog->addWidget(pathToFileLabel,0,0);
-    mainDialog->addWidget(pathToFileLineEdit,1,0);
-    mainDialog->addWidget(startDateTimeLabel,4,0);
-    mainDialog->addWidget(endDateTimeLabel,4,1);
-    mainDialog->addWidget(dat_begin,5,0);
-    mainDialog->addWidget(dat_end,5,1);
-}
+    mainDialog->addWidget(fileverification,0,0);
+    mainDialog->addWidget(plottingChart,1,0);
+    mainDialog->addWidget(analisys_dialog,2,0);
+    mainDialog->setSpacing(5);
+    mainDialog->setContentsMargins(0,0,0,0);
 
-Main_dialog::~Main_dialog()
-{
+    QSize widSize(325, 515);
+    this->setFixedSize(widSize);
+
+    QString mainDialogStyle(
+                            "QLineEdit {"
+                            "background-color: white;"
+                            "font: bold 14px;"
+                            "border-style: outset;"
+                            "border-radius: 10px;"
+                            "padding: 1px;"
+                            "}"
+
+                            "QPushButton {"
+                            "background-color: white;"
+                            "font: bold 14px;"
+                            "border-style: outset;"
+                            "border-radius: 10px;"
+                            "padding: 1px;"
+                            "}"
+
+                            "QLabel#pathToFileLabel {"
+                            "border-style: outset;""border-width: 2px;""border-color: beige;"
+                            "}"
+
+                            "QLabel#plottingChartLabel {"
+                            "border-style: outset;""border-width: 2px;""border-color: beige;"
+                            "}"
+
+                            "QLabel#analisysLabel {"
+                            "border-style: outset;""border-width: 2px;""border-color: beige;"
+                            "}"
+
+                            "QLabel {"
+                            "color: white;"
+                            "font: bold 14px;"
+                            "}"
+                            );
+
+    this->setStyleSheet(mainDialogStyle);
 }

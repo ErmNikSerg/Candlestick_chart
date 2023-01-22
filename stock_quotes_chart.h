@@ -10,7 +10,6 @@ class Stock_quotes_chart: public QWidget
 
      public:
         explicit Stock_quotes_chart(QWidget *parent = nullptr);
-        ~Stock_quotes_chart();
 
         QSize get_chartSize();
 

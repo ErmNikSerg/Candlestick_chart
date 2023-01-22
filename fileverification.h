@@ -2,7 +2,10 @@
 #define FILEVERIFICATION_H
 
 #include <QWidget>
-
+#include <QGridLayout>
+#include <QLabel>
+#include <QLineEdit>
+#include <QPushButton>
 class FileVerification : public QWidget
 {
     Q_OBJECT

@@ -7,15 +7,12 @@
 #include <QLineEdit>
 #include <QComboBox>
 
-#include "dateandtime_dialog.h"
-
 class Main_dialog: public QWidget
 {
      Q_OBJECT
 
      public:
-        explicit Main_dialog(QWidget *parent = nullptr);
-        ~Main_dialog();
+        explicit Main_dialog(QWidget *parent = nullptr);     
 
      protected:
 
