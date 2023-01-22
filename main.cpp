@@ -10,6 +10,7 @@ int main(int argc, char *argv[])
 
     QColor appColor(64,64,64);
     QPalette appPalette(appColor);
+
     a.setPalette(appPalette);
     return a.exec();
 }

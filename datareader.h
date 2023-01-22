@@ -20,8 +20,8 @@ public:
     };
 
 public:
-    void readFile(QString ticketDataFile); //Read data from file
-    QList<std::int64_t> *timestempList(QDateTime dt_begin, QDateTime dt_end, Scale scale);//Calculate List of timestemp for getSet
+    void readFile(QString ticketDataFile); //Read data from file to ticker_qhash
+    QList<std::int64_t> *timestempList(QDateTime dt_begin, QDateTime dt_end, Scale scale);//Calculate List of timestemp
     QCandlestickSet *getSet(std::int64_t timestemp, Scale scale); //Data for chart
 
 protected:

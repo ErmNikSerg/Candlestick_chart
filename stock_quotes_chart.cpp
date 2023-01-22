@@ -76,10 +76,6 @@ Stock_quotes_chart::Stock_quotes_chart(QWidget *parent)
     chartSize = chartView->size();
 }
 
-Stock_quotes_chart::~Stock_quotes_chart()
-{
-}
-
  QSize Stock_quotes_chart::get_chartSize()
 {
     return chartSize;

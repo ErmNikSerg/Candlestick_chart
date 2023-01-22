@@ -24,6 +24,8 @@ set(PROJECT_SOURCES
         datareader.h            datareader.cpp
         dateandtime_dialog.h    dateandtime_dialog.cpp
         fileverification.h      fileverification.cpp
+        plottingchart_dialog.h  plottingchart_dialog.cpp
+        analisys_dialog.h       analisys_dialog.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
