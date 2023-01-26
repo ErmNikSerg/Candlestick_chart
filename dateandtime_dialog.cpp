@@ -11,22 +11,22 @@ DateAndTime_dialog::DateAndTime_dialog(QWidget *parent)
     QLabel *secondLabel = new QLabel("Second");
 
     QLineEdit *yearLineEdit = new QLineEdit;
-    yearLineEdit->setPlaceholderText("2022");
+    yearLineEdit->setPlaceholderText(year_str);
     yearLineEdit->setReadOnly(true);
     QLineEdit *monthLineEdit = new QLineEdit;
-    monthLineEdit->setPlaceholderText("01");
+    monthLineEdit->setPlaceholderText(month_str);
     monthLineEdit->setReadOnly(true);
     QLineEdit *dayLineEdit = new QLineEdit;
-    dayLineEdit->setPlaceholderText("01");
+    dayLineEdit->setPlaceholderText(day_str);
     dayLineEdit->setReadOnly(true);
     QLineEdit *hourLineEdit = new QLineEdit;
-    hourLineEdit->setPlaceholderText("07");
+    hourLineEdit->setPlaceholderText(hour_str);
     hourLineEdit->setReadOnly(true);
     QLineEdit *minuteLineEdit = new QLineEdit;
-    minuteLineEdit->setPlaceholderText("00");
+    minuteLineEdit->setPlaceholderText(minute_str);
     minuteLineEdit->setReadOnly(true);
     QLineEdit *secondLineEdit = new QLineEdit;
-    secondLineEdit->setPlaceholderText("00");
+    secondLineEdit->setPlaceholderText(second_str);
     secondLineEdit->setReadOnly(true);
 
     QSize smallSize(50,20);
@@ -75,4 +75,27 @@ DateAndTime_dialog::DateAndTime_dialog(QWidget *parent)
 
     QSize widSize(160, 95);
     this->setFixedSize(widSize);
+}
+
+QDateTime DateAndTime_dialog::getdateTime()
+{
+    QDate date;
+    QTime time;
+    QDateTime dateTime(date,time);
+
+    auto year = year_str.toInt();
+    auto month = month_str.toInt();
+    auto day = day_str.toInt();
+
+    auto hour = hour_str.toInt();
+    auto minute = minute_str.toInt();
+    auto second = second_str.toInt();
+
+    date.setDate(year,month,day);
+    time.setHMS(hour,minute,second);
+
+    dateTime.setDate(date);
+    dateTime.setTime(time);
+
+    return dateTime;
 }
