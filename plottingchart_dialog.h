@@ -11,8 +11,10 @@ class PlottingChart_Dialog : public QWidget
     Q_OBJECT
 public:
     explicit PlottingChart_Dialog(QWidget *parent = nullptr);
-
+    void plottingChart();
 signals:
+
+
 
 };
 

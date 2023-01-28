@@ -1,6 +1,11 @@
 #include "plottingchart_dialog.h"
 #include "dateandtime_dialog.h"
 
+void someFunction()
+{
+    qDebug() << "lol";
+};
+
 PlottingChart_Dialog::PlottingChart_Dialog(QWidget *parent)
     : QWidget{parent}
 {
@@ -39,5 +44,10 @@ PlottingChart_Dialog::PlottingChart_Dialog(QWidget *parent)
 
     QSize widSize(325, 175);
     this->setFixedSize(widSize);
+
+    QDateTime dateTime_begin = dat_begin->getdateTime();
+    QDateTime dateTime_end = dat_end->getdateTime();
+
+    connect(buildChartButton, &QPushButton::clicked, someFunction);
 
 }

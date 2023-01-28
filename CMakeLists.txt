@@ -16,9 +16,7 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Charts)
 
 set(PROJECT_SOURCES
         main.cpp
-        mainwindow.cpp
-        mainwindow.h
-
+        mainwindow.h            mainwindow.cpp
         stock_quotes_chart.h    stock_quotes_chart.cpp
         main_dialog.h           main_dialog.cpp
         datareader.h            datareader.cpp
