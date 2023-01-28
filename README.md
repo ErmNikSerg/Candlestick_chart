@@ -1,3 +1,4 @@
 # Candlestick_chart
-Project for learning C++ and Qt. 
-Candlestick chart and Analisys price of stock exshange 
+Проект для самостоятельного изучения C++ и Qt. 
+По данным торговов с биржи строится свечной график за указанный переод времени. Так же за указанный переод производится некий анализ цен.
+Проект на ранней стадии разработки.
