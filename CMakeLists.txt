@@ -15,15 +15,15 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Charts)
 
 set(PROJECT_SOURCES
-        main.cpp
-        mainwindow.h            mainwindow.cpp
-        stock_quotes_chart.h    stock_quotes_chart.cpp
-        main_dialog.h           main_dialog.cpp
-        datareader.h            datareader.cpp
-        dateandtime_dialog.h    dateandtime_dialog.cpp
-        fileverification.h      fileverification.cpp
-        plottingchart_dialog.h  plottingchart_dialog.cpp
-        analisys_dialog.h       analisys_dialog.cpp
+        src/main.cpp
+        src/mainwindow.h            src/mainwindow.cpp
+        src/stock_quotes_chart.h    src/stock_quotes_chart.cpp
+        src/main_dialog.h           src/main_dialog.cpp
+        src/datareader.h            src/datareader.cpp
+        src/dateandtime_dialog.h    src/dateandtime_dialog.cpp
+        src/fileverification.h      src/fileverification.cpp
+        src/plottingchart_dialog.h  src/plottingchart_dialog.cpp
+        src/analisys_dialog.h       src/analisys_dialog.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
